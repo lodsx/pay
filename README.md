@@ -58,4 +58,20 @@
   </script>
 
 </body>
+</html>      document.getElementById('qrImage').src = qrUrl;
+      document.getElementById('qrArea').style.display = 'block';
+    }
+
+    function copyIBAN() {
+      navigator.clipboard.writeText(iban);
+      alert('تم نسخ رقم الحساب');
+    }
+
+    function sendWhatsApp() {
+      const amount = document.getElementById('amount').value;
+      window.open(`https://wa.me/?text=تم التحويل بمبلغ ${amount} ريال على الحساب ${iban}`);
+    }
+  </script>
+
+</body>
 </html>
